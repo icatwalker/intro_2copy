@@ -1,0 +1,147 @@
+/*鼠标样式*/
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#left_box {
+  background: #c0c0c0;
+  left: -100%;
+}
+/*中间*/
+#middle_box {
+  left: 0;
+}
+#right_box {
+  background: red;
+  left: 100%;
+}
+#left_select,
+#right_select {
+  width: 150px;
+  height: 220px;
+  display: block;
+}
+#left_select {
+  background: url("../img/mouse_small01.png");
+  /**/
+  width: 220px;
+  position: absolute;
+  top: 300px;
+  left: 900px;
+}
+#right_select {
+  position: absolute;
+  background: url("../img/fish_small.png");
+  top: 300px;
+  left: 1600px;
+}
+#eye {
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  background: url("../img/eye1.png");
+  top: 342px;
+  left: 1295px;
+}
+/*右边*/
+#right_box_up {
+  background-color: darkcyan;
+}
+#right_box_down {
+  background-color: blueviolet;
+}
+#left_box {
+  background: url("../img/3d-1.jpg") no-repeat;
+  background-size: cover;
+}
+#left_box #parent {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  /*假定 人眼 到投射平面的距离*/
+  -webkit-perspective: 1000px;
+  margin: 0 auto;
+}
+#left_box #container {
+  margin: 0 auto;
+  width: 1200px;
+  height: 400px;
+  position: relative;
+  /*旋转*/
+  /*transform:rotatex(-30deg) rotatey(0deg);*/
+  /*将当前元素变为3d元素*/
+  transform-style: preserve-3d;
+  animation: scroll 15s linear infinite;
+  -webkit-animation: scroll 15s linear infinite;
+}
+#left_box #container a > span {
+  display: inline-block;
+  width: 300px;
+  color: aliceblue;
+  background: #E4393c;
+  text-align: center;
+}
+#left_box #container:hover {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: rotatex(-20deg) rotatey(0deg);
+  }
+  100% {
+    transform: rotatex(-20deg) rotatey(360deg);
+  }
+}
+@-webkit-keyframes scroll {
+  0% {
+    transform: rotatex(-20deg) rotatey(0deg);
+  }
+  100% {
+    transform: rotatex(-20deg) rotatey(360deg);
+  }
+}
+#left_box #container a {
+  display: block;
+  width: 25%;
+  height: 50%;
+  background: #2080BD;
+  position: absolute;
+  left: 37.5%;
+  top: 50%;
+}
+#left_box #container a:nth-child(1) {
+  transform: rotatey(0deg) translatez(400px);
+}
+#left_box #container a:nth-child(2) {
+  transform: rotatey(60deg) translatez(400px);
+}
+#left_box #container a:nth-child(3) {
+  transform: rotatey(120deg) translatez(400px);
+}
+#left_box #container a:nth-child(4) {
+  transform: rotatey(180deg) translatez(400px);
+}
+#left_box #container a:nth-child(5) {
+  transform: rotatey(240deg) translatez(400px);
+}
+#left_box #container a:nth-child(6) {
+  transform: rotatey(300deg) translatez(400px);
+}
+#left_back,
+#right_back {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+}

@@ -1,0 +1,53 @@
+.hide{display: none}
+.body{}
+/*鼠标样式*/
+
+
+#left_box{
+  background-color: #000060;
+}
+/*中间*/
+#middle_box{
+  background:url("../img/11-noeye.png") no-repeat top fixed;
+  width:100%;
+}
+#left_select,#right_select{
+  width: 150px;
+  height:220px;
+  display: block;
+}
+#left_select{
+  background: url("../img/mouse_small01.png");
+/**/
+  width: 220px;
+  position: absolute;
+  top:35%;
+  left: 48%;
+}
+
+#right_select{
+  position: absolute;
+  background: url("../img/fish_small.png");
+  top:35%;
+  left: 85%;
+}
+#eye{
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  background: url("../img/eye1.png");
+  top:36%;
+  left: 65.3%;
+}
+
+
+
+/*右边*/
+#right_box_up{
+  background-color: darkcyan;
+}
+#right_box_down{
+  background-color: blueviolet;
+}
+
